@@ -21,27 +21,6 @@ class MyApp extends StatelessWidget {
         return NetworkGuardian(
           position: ToastPosition.top,
           toastDuration: const Duration(seconds: 5),
-          customToast: Material(
-            color: Colors.transparent,
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.deepPurple,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Row(
-                children: [
-                  Icon(Icons.cloud_off, color: Colors.white),
-                  SizedBox(width: 8),
-                  Text(
-                    'Custom: No Internet!!!!',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-            ),
-          ),
           child: child!,
         );
       },
