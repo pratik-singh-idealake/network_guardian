@@ -27,7 +27,6 @@ class _NetworkGuardianState extends State<NetworkGuardian>
   final NetworkGuardianController _controller = NetworkGuardianController();
   StreamSubscription<bool>? _subscription;
 
-  // ✅ our own overlay key — fully independent!
   final GlobalKey<OverlayState> _overlayKey = GlobalKey<OverlayState>();
 
   OverlayEntry? _overlayEntry;
@@ -98,7 +97,6 @@ class _NetworkGuardianState extends State<NetworkGuardian>
     _hideTimer?.cancel();
     _removeOverlay();
 
-    // ✅ use our own overlay — always available!
     final overlayState = _overlayKey.currentState;
     if (overlayState == null) {
       _isToastVisible = false;
@@ -155,7 +153,6 @@ class _NetworkGuardianState extends State<NetworkGuardian>
 
   @override
   Widget build(BuildContext context) {
-    // ✅ our own Overlay widget
     // completely independent from Navigator
     // always has overlay context
     return Overlay(

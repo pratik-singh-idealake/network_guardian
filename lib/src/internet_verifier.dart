@@ -1,21 +1,3 @@
-// import 'dart:io';
-//
-// class InternetVerifier {
-//
-//   static Future<bool> hasInternet() async {
-//     try {
-//       final response = await HttpClient()
-//           .getUrl(Uri.parse('https://clients3.google.com/generate_204'))
-//           .timeout(const Duration(seconds: 5));
-//
-//       final result = await response.close();
-//
-//       return result.statusCode == 204;
-//     } catch (_) {
-//       return false;
-//     }
-//   }
-// }
 
 import 'dart:io';
 
@@ -35,11 +17,11 @@ class InternetVerifier {
 
         request.headers.set('Cache-Control', 'no-cache');
         final response = await request.close();
-        await response.drain(); // ✅ drain response body properly
+        await response.drain();
 
         if (response.statusCode == 204) return true;
       } catch (_) {
-        continue; // try next url
+        continue;
       }
     }
     return false;

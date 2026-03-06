@@ -257,4 +257,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ## 👨‍💻 Author
 
-Made with ❤️ by Pratik Singh
+by Pratik Singh
