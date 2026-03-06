@@ -1,7 +1,8 @@
 name: network_guardian
 description: "A Flutter package that monitors internet connectivity and shows customizable toast notifications when connection is lost."
 version: 0.0.1
-homepage: #need to add repository link
+homepage: https://github.com/pratik-singh-idealake/network_guardian
+repository: https://github.com/pratik-singh-idealake/network_guardian
 
 environment:
   sdk: ^3.9.2
